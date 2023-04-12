@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/yalit/fem-joblistings](https://github.com/yalit/fem-joblistings)
+- Live Site URL: [https://yalit.github.io/fem-joblistings/](https://yalit.github.io/fem-joblistings/)
 
 ## My process
 
