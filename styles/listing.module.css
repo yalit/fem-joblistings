@@ -1,0 +1,15 @@
+.listing {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.75 * var(--logo-width));
+    margin-top: var(--logo-width);
+}
+
+@media all and (min-width: 1440px) {
+    .listing {
+        width: 65%;
+        gap: calc(0.35 * var(--logo-width));
+    }
+}
