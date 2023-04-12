@@ -3,18 +3,19 @@ import { Job } from '@/components/jobs/jobs.type';
 import { GetStaticProps } from 'next';
 import styles from '../styles/listing.module.css';
 import Header from '@/components/header/header';
-import { useMemo, useReducer } from 'react';
+import { Reducer, useMemo, useReducer } from 'react';
 import { filterReducer } from '@/context/filterReducer';
-import { FilterContext, initialFilters } from '@/context/filterContext';
+import { FilterContext, FilterState, initialFilters } from '@/context/filterContext';
 import { FilterList } from '@/components/filters/filterList';
 import { getAllJobs } from '@/data/job.repository';
+import { FilterAction } from '@/context/filterAction.type';
 
 export interface Home {
   allJobs: Job[]
 }
 
 export default function Home({allJobs}: Home) {
-  const [state, dispatch] = useReducer(filterReducer,initialFilters);
+  const [state, dispatch] = useReducer<Reducer<FilterState, FilterAction>>(filterReducer,initialFilters);
 
   const filteredJobs = useMemo(() => {
     return allJobs.filter((job: Job) => {
