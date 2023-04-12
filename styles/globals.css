@@ -15,11 +15,14 @@
   --primary: hsl(180, 29%, 50%);
 
   --logo-width: 50px;
+
+  --container-width: 85%;
 }
 
 @media all and (min-width: 860px) {
   :root {
     --logo-width: 75px;
+    --container-width: 65%;
   }
 }
 

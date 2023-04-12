@@ -1,18 +1,28 @@
-export interface Job {
-    id: number
-    company: string
-    logo: string
+export interface JobInput {
+    id: number,
+    company: string,
+    logo: string,
     new: boolean,
-    featured: true
+    featured: boolean
     position: string,
-    role: Role,
-    level: Level
+    role: string,
+    level: string
     postedAt: string,
     contract: string,
     location: string
-    languages: string[]
+    languages: string[],
     tools: string[]
 }
 
-export type Role = "Senior" | "Fullstack" | "Backend"
-export type Level = "Junior" | "Midweight" | "Senior"
+export interface Job {
+    id: number,
+    company: string,
+    logo: string,
+    new: boolean,
+    featured: boolean
+    position: string,
+    postedAt: string,
+    contract: string,
+    location: string
+    tags: string[]
+}

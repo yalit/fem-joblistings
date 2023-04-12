@@ -1,0 +1,57 @@
+.filterList {
+    min-height: 100px;
+    width: var(--container-width);
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 10px;
+    margin: -50px auto;
+    border-radius: 5px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags .filterTag {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.tags .filterTag .tag {
+    padding: 10px;
+    background: var(--light);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.tags .filterTag .remove {
+    padding: 10px;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.tags .filterTag .remove:hover {
+    background: var(--darker);
+}
+
+.clear {
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.clear:hover {
+    margin-bottom: -2px;
+    border-bottom: 2px solid var(--primary);
+}

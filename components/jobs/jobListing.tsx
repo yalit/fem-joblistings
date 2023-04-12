@@ -32,10 +32,7 @@ export default function JobListing({ job }: JobListing) {
                 </div>
             </div>
             <div className={styles.tags}>
-                <Tag tag={job.role} />
-                <Tag tag={job.level} />
-                {job.languages.map((l => <Tag tag={l} key={`language-${l}`} />))}
-                {job.tools.map((t => <Tag tag={t} key={`tool-${t}`} />))}
+                {job.tags.map((l => <Tag tag={l} key={`language-${l}`} />))}
             </div>
         </div>
     )

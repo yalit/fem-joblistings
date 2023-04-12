@@ -1,15 +1,17 @@
 .listing {
-    width: 85%;
+    width: var(--container-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: calc(0.75 * var(--logo-width));
-    margin-top: var(--logo-width);
+    margin-top: calc(2 * var(--logo-width));
+    margin-bottom: calc(0.5 * var(--logo-width));
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 740px) {
     .listing {
-        width: 65%;
+        width: var(--container-width);
         gap: calc(0.35 * var(--logo-width));
+        margin-top: var(--logo-width);
     }
 }
