@@ -1,6 +1,5 @@
 import JobListing from '@/components/jobs/jobListing';
 import { Job } from '@/components/jobs/jobs.type';
-import { getAllJobs } from '@/components/jobs/job.repository'
 import { GetStaticProps } from 'next';
 import styles from '../styles/listing.module.css';
 import Header from '@/components/header/header';
@@ -8,6 +7,7 @@ import { useMemo, useReducer } from 'react';
 import { filterReducer } from '@/context/filterReducer';
 import { FilterContext, initialFilters } from '@/context/filterContext';
 import { FilterList } from '@/components/filters/filterList';
+import { getAllJobs } from '@/data/job.repository';
 
 export interface Home {
   allJobs: Job[]
