@@ -19,9 +19,7 @@ export default function Home({allJobs}: Home) {
   const [state, dispatch] = useReducer<Reducer<FilterState, FilterAction>>(filterReducer,initialFilters);
 
   const filteredJobs = useMemo(() => {
-    return allJobs.filter((job: Job) => {
-        console.log("job tags", job.id, job.tags);
-        
+    return allJobs.filter((job: Job) => {        
         const intersection = job.tags.filter(t => state.filters.includes(t))
         return intersection.length === state.filters.length
     })
