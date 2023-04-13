@@ -9,6 +9,7 @@ import { FilterContext, FilterState, initialFilters } from '@/context/filterCont
 import { FilterList } from '@/components/filters/filterList';
 import { getAllJobs } from '@/data/job.repository';
 import { FilterAction } from '@/context/filterAction.type';
+import Head from 'next/head';
 
 export interface Home {
   allJobs: Job[]
@@ -30,7 +31,7 @@ export default function Home({allJobs}: Home) {
     <FilterContext.Provider value={{state, dispatch}}>
         <Header />
         {state.filters.length > 0 && <FilterList />}
-        <div className={styles.listing}>
+        <div className={styles.listing} role="main">
           {filteredJobs.map((job: Job) => {
             return <JobListing job={job} key={job.id} />
           })}
